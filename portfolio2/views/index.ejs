@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <nav>
+        <div id="menu">
+            <% navItems.forEach(item=> { %>
+                <a class="tittle-menu"  href="<%= item.link %>">
+                    <%= item.name %>
+                </a>
+                <% }) %>
+        </div>
+    </nav>
+
+
+    <header class="sample-header">
+        <section class="sample-header-section">
+            <div class="item1">
+                <div class="item-foto"> 
+                <img src="/Tiago.jpeg" class="header-image" />
+            </div>
+            <div class="item-titulo">
+            <h1>
+                <%= header.title %>
+            </h1>
+            <h2>
+                <%= header.subtitle %>
+            </h2>
+
+            <div class="curriculo">
+                <a href="/Currículo-Tiago-Freitas.pdf" download="" class="btn-download">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z">
+                                </path>
+                            </svg>
+                            Baixar Currículo
+                </a>
+            </div>
+
+        </div>
+    </div>
+        </section>
+    </header>
+
+    <a id="About"></a>
+
+    <section class="sample-section-wrap">
+        <section class="sample-section caontainer-sobre">
+            <div class="about">
+            <h1 id="titulo-sobre">About me.</h1>
+            <br>
+            <br>
+            <p style="font-size: 130%;">
+                <%- about.text %>
+            </p>
+        </div>
+        </section>
+    </section>
+
+    <hr id="traço" />
+
+    <a id="My Projects"></a>
+
+<section class="my-projects">
+    <h1 class="tittle-project">My Projects.</h1>
+    <div class="project1">
+        <h1 class="tittle-project1">⮕Trabalho de conclusão de curso (TCC-2023).</h1>
+        <h2>
+            -Título:
+            <%- project1.tittle %>
+        </h2>
+
+        <h2>
+            -Desafio: 
+            <%- project1.challenge %>
+        </h2>
+           
+        <h2>
+            -Tecnologias Ultilizadas:
+            <%- project1.technologiesUsed %>
+        </h2>
+            
+        <h2>
+            -Resultado:
+            <%- project1.result %>
+        </h2>
+
+        <br>
+
+        <video width="100%" height="600px" controls>
+            <source src="/Mídia1.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <br>
+    <hr id="traço" />
+    <br>
+
+<div class="project2">
+    <h1 class="tittle-project2">⮕ API primeiro semestre.</h1>
+    <h2>
+        -Descrição: 
+        <%- project2.descrition %>
+    </h2>
+       
+    <h2>
+        -Tecnologias Ultilizadas:
+        <%- project2.technologiesUsed %>
+    </h2>
+        
+    <h2>
+        -Desafio:
+        <%- project2.challenge %>
+    </h2>
+
+    <h2>
+        -Solução:
+        <%- project2.solution %>
+    </h2>
+
+    <br>
+
+    <video width="100%" height="600px" controls>
+        <source src="/videoplayback.mp4" type="video/mp4">
+    </video>
+</div>
+
+</section>
+
+    <hr id="traço" />
+
+    <a id="Skills"></a>
+
+    <section class="skills-section">
+        <h1 class="skills-title">Skills</h1>
+      
+        <div class="grid">
+          <% skills.forEach(skill=> { %>
+            <div id="item-<%= skill.id %>">
+              <h3><%= skill.name %></h3>
+            </div>
+          <% }) %>
+        </div>
+      </section>
+      
+
+    <hr id="traço" />
+
+
+    <a id="Contacts"></a>
+    <section class="Contatos">
+        <h1>Contacts</h1>
+        <div class="contatos-container">
+          <% contacts.forEach(contact => { %>
+            <a href="<%= contact.link %>" target="_blank" class="item-contato contato-<%= contact.platform %>">
+              <% if (contact.platform === 'linkedin') { %>
+                <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0V8.98zM8.08 8.98h4.8v2.05h.07c.67-1.27 2.3-2.6 4.73-2.6 5.06 0 6 3.33 6 7.65V24h-5v-6.55c0-1.56-.03-3.58-2.18-3.58-2.18 0-2.52 1.7-2.52 3.45V24h-5V8.98z"/>
+                </svg>
+              <% } else if (contact.platform === 'email') { %>
+                <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 13.065L0 6.146V18a2.006 2.006 0 002 2h20a2.006 2.006 0 002-2V6.146zM12 11.005L24 4H0z"/>
+                </svg>
+              <% } else if (contact.platform === 'github') { %>
+                <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.107-.775.418-1.305.762-1.605-2.665-.3-5.467-1.332-5.467-5.93 0-1.31.468-2.38 1.236-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.98-.398 3-.403 1.02.005 2.043.137 3 .403 2.29-1.552 3.297-1.23 3.297-1.23.653 1.653.241 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.807 5.625-5.48 5.922.43.372.823 1.102.823 2.222v3.293c0 .32.218.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              <% } %>
+            </a>
+          <% }) %>
+        </div>
+      </section>
+      
+    
+
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> - Todos os direitos reservados</p>
+    </footer>
+
+</body>
+
+</html>

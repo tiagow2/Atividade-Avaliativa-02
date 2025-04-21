@@ -1,0 +1,253 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #222;
+  color: white;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+nav {
+  background-color: #222;
+  padding: 10px 0;
+  text-align: center;
+}
+
+a {
+  font-weight: 800;
+}
+
+nav tittle-menu {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: color 0.3s ease;
+}
+
+
+.header-image {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  border-radius: 20%;
+}
+
+header.sample-header {
+  padding: 40px 20px;
+  background-color: rgba(147, 51, 234, 255);
+  color: rgb(0, 0, 0);
+
+}
+
+.item1 {
+  display: grid;
+  grid-template-columns: 50% 35%;
+}
+
+#titulo-sobre{
+  font-size: 300%;
+  font-weight: 800;
+}
+
+.item-foto {
+  margin-left: 40%;
+}
+
+header h1 {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.p {
+  font-size: 130%;
+}
+
+.about {
+  border: 5px solid rgb(255, 255, 255);
+  padding: 10%;
+}
+
+header h2 {
+  font-size: 250%;
+  font-weight: 400;
+}
+
+/* Seção Sobre */
+.sample-section-wrap {
+  padding: 40px 0;
+  background-color: #222;
+}
+
+.caontainer-sobre {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+/* Seção Tecnologias */
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  padding: 40px 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid div {
+  background-color: rgba(147, 51, 234, 255);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.grid h3 {
+  font-size: 1.2rem;
+}
+
+/* Linha divisória */
+#traço {
+  margin: 50px auto;
+  width: 80%;
+  border: 1px solid #ccc;
+}
+
+.Contatos {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.contatos-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.item-contato {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.item-contato:hover {
+  transform: scale(1.1);
+}
+
+.item-contato h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #222;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Responsividade extra */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+  }
+
+  .caontainer-sobre {
+    padding: 0 10px;
+  }
+}
+
+
+a {
+  display: inline;
+  font-size: 0.9em;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0 0 30px
+}
+
+.btn-download {
+  background-color: rgba(28, 28, 28, 255);
+  color: white;
+  padding: 10px 16px;
+  display: flex;
+  margin-right: 10%;
+  margin-top: 30%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: rgba(80, 80, 80, 255);
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 300%;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 150%;
+}
+
+.tittle-project {
+  text-align: center;
+}
+
+.tittle-project1 {
+  font-weight: 400;
+}
+
+.tittle-project2 {
+  font-weight: 400;
+}
+
+.item-contato {
+  font-weight: 800;
+}
+
+.grid div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.grid div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(147, 51, 234, 0.5);
+}
+
+.skills-section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.skills-title {
+  font-size: 300%;
+  font-weight: 800;
+}
